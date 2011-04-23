@@ -149,6 +149,10 @@ hr {
 .text h3 { font-size:1.2em; }
 .text h4,.text h5,.text h6 { font-size:1em; }
 
+.text > *:first-child {
+	margin-top: 0;
+}
+
 /* 3.2 Block elements */
 .text address,.text aside,.text audio,.text blockquote,.text canvas,.text details,
 .text dl,.text embed,.text figure,.text form,.text header,.text hgroup,.text hr,.text iframe,
@@ -205,7 +209,7 @@ ol.image,ul.image {
 }
 
 /* 4.2. Simple tabs system. You can overwrite background and text styles */
-.tabs {
+.text .tabs,.tabs {
 	list-style:none;
 	padding:0;
 	margin:0;
@@ -247,7 +251,7 @@ ol.image,ul.image {
 	padding:0;
 	display:inline;
 }
-ul.inline { list-style:none; }
+ul.inline { list-style:none; margin:0; }
 ul.inline li { display:inline; }
 
 /* 4.4. Float elements */
@@ -256,10 +260,10 @@ ul.inline li { display:inline; }
 .right-right { text-align:right !important; }
 
 /* 4.5. Clear (applied to containers block elements by default) */
-.clear,.page { display:block; }
-article:after,aside:after,details:after,div:after,fieldset:after,figure:after,
+.clear { display:block; }
+body:after,article:after,aside:after,details:after,div:after,fieldset:after,figure:after,
 footer:after,header:after,section:after,summary:after,
-.clear:after,.tabs:after,.page:after {
+.clear:after,.tabs:after {
 	content:" ";
 	display:block;
 	height:0;
