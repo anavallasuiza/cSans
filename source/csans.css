@@ -1,7 +1,7 @@
 /*
-* cSans v1.0
-* 2011 Copyright A navalla suíza http://anavallasuiza.com
-* cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
+ * cSans v1.1
+ * 2011 Copyright A navalla suíza http://anavallasuiza.com
+ * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
 */
 
 /* 1. RESET */
@@ -22,9 +22,9 @@ body {
 }
 
 /* 1.2 Block elements */
-address,article,aside,audio,blockquote,canvas,details,div,embed,
-figcaption,figure,footer,h1,h2,h3,h4,h5,h6,header,hgroup,iframe,
-img,nav,object,p,pre,section,summary,video {
+audio,canvas,iframe,img,object,embed,video,
+address,article,aside,blockquote,details,div,figcaption,figure,
+footer,h1,h2,h3,h4,h5,h6,header,hgroup,nav,p,pre,section,summary {
 	margin:0;
 	padding:0;
 	border:none;
@@ -34,6 +34,9 @@ img,nav,object,p,pre,section,summary,video {
 	outline:none;
 }
 address { font-style: normal; }
+
+/* 1.3 Inline-block elements */
+audio,canvas,iframe,img,object,embed,video { display:inline-block; }
 
 /* 1.3 Inline elements */
 a,abbr,b,cite,code,command,del,dfn,em,i,ins,kbd,mark,meter,
@@ -48,6 +51,17 @@ em,dfn,i { font-style:italic; }
 strong,b { font-weight: bold; }
 small,sub,sup { font-size: 0.75em; }
 mark { background-color: #FF0; }
+abbr[title] { border-bottom: 1px dotted; }
+
+/* 1.4 Sub and sup elements */
+sub,sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
 
 /* 1.4 Forms */
 form,fieldset,legend {
@@ -74,12 +88,16 @@ textarea {
 	overflow-y:auto;
 	display:block;
 	box-sizing: border-box;
+	vertical-align:top;
 }
 select {
 	margin:0;
 	box-sizing: border-box;
 }
-
+button,input,select,textarea {
+	vertical-align:baseline;
+}
+button,input[type="button"],input[type="reset"],input[type="submit"] { cursor:pointer; }
 
 /* 1.5 Lists */
 ol,ul,dl,dt,dd {
@@ -149,7 +167,7 @@ hr {
 .text h3 { font-size:1.2em; }
 .text h4,.text h5,.text h6 { font-size:1em; }
 
-.text > *:first-child {
+.text *:first-child {
 	margin-top: 0;
 }
 
@@ -208,74 +226,30 @@ ol.image,ul.image {
 	float:left;
 }
 
-/* 4.2. Simple tabs system. You can overwrite background and text styles */
-.text .tabs,.tabs {
-	list-style:none;
-	padding:0;
-	margin:0;
-	display: block;
-}
-.tabs > li {
-	float:left;
-	margin:0;
-	position: relative;
-}
-.tabs > li > span,
-.tabs > li > a,
-.tabs > li > strong,
-.tabs > li > em {
-	display:block;
-	white-space:nowrap;
-	text-align:center;
-	outline:0;
-	text-decoration:none;
-}
-.tabs > li > a {
-	cursor:pointer;
-}
-.tabs > li ul {
-	position: absolute;
-	z-index: 999;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: none;
-}
-.tabs > li:hover ul {
-	display: block;
-}
-
 /* 4.3. Convert a block element (like a fieldset) into a inline element */
 .inline {
 	margin:0;
 	padding:0;
 	display:inline;
 }
-ul.inline { list-style:none; margin:0; }
-ul.inline li { display:inline; }
+ul.inline,ol.inline { list-style:none; margin:0; }
+.inline li { display:inline; }
 
 /* 4.4. Float elements */
 .left { float:left !important; }
 .right,.right-right { float:right !important; }
 .right-right { text-align:right !important; }
 
-/* 4.5. Clear (applied to containers block elements by default) */
-.clear { display:block; }
-body:after,article:after,aside:after,details:after,div:after,fieldset:after,figure:after,
-footer:after,header:after,section:after,summary:after,
-.clear:after,.tabs:after {
-	content:" ";
-	display:block;
-	height:0;
+/* 4.5. Clear (clearfix) */
+.clear:before,.clear:after {
+	content:"";
+	display:table;
+}
+.clear:after {
 	clear:both;
-	visibility:hidden;
-	font-size:0;
 }
 
-/* 4.6. Destroy margin collapse */
-.no-collapse { padding-top:1px; }
-
-/* 4.7. Hide an element */
+/* 4.6. Hide an element */
 .hide { display:none; }
 .hide-accesible {
 	position: fixed;
@@ -284,11 +258,15 @@ footer:after,header:after,section:after,summary:after,
 	top: -100px;
 	overflow: hidden;
 }
+[hidden] {
+	display: none;
+	visibility: hidden;
+}
 
-/* 4.8. To make any element behave like a link */
+/* 4.7. To make any element behave like a link */
 .link,.link * { cursor:pointer; text-decoration: underline;}
 
-/* 4.9. List styles */
+/* 4.8. List styles */
 .square,.disc { margin-left:1.5em; }
 .square { list-style-type: square; }
 .disc { list-style-type: disc; }
@@ -298,33 +276,29 @@ footer:after,header:after,section:after,summary:after,
 .lower-roman { list-style-type: lower-roman; }
 .upper-roman { list-style-type: upper-roman; }
 
-
-/* 5. LAYOUT */
-.row {
-	float:left;
-	width:100%;
-	margin:0;
-	padding:0;
-	border:none;
-}
-
-/* 6. HACKS AND VENDOR PREFIXES */
+/* 5. HACKS AND VENDOR PREFIXES */
 input,textarea,select {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
 
 /* Make search input equal in all browsers (with the class .no-appearance) */
-input[type=search].no-appearance::-webkit-search-decoration,
-input[type=search].no-appearance::-webkit-search-cancel-button,
-input[type=search].no-appearance::-webkit-search-results-button,
-input[type=search].no-appearance::-webkit-search-results-decoration {
+input[type="search"].no-appearance::-webkit-search-decoration,
+input[type="search"].no-appearance::-webkit-search-cancel-button,
+input[type="search"].no-appearance::-webkit-search-results-button,
+input[type="search"].no-appearance::-webkit-search-results-decoration {
 	display: none;
 }
 
 /* Unifique the appearance of inputs and textareas */
-input[type=search].no-appearance,
+input[type="search"].no-appearance,
 textarea {
 	-webkit-appearance: textfield;
 	-moz-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
 }

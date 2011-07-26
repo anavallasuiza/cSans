@@ -1,0 +1,61 @@
+/*
+ * cSans Layout v.1.0
+ * 2011 Copyright A navalla suíza http://anavallasuiza.com
+ * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
+*/
+
+/* 1. ROWS */
+/* 1.1. Basic styles */
+.row,.row-cells,.row-blocks,.row-floats {
+	width:100%;
+	box-sizing:border-box;
+	list-style:none;
+}
+.row,.row-blocks { display:block; }
+.row-cells { display:table; }
+.row-cells > * {
+	display:table-cell;
+	border-collapse:collapse;
+}
+.row-blocks > * {
+	display:inline-block;
+	vertical-align:top;
+}
+.row-floats > * {
+	float:left;
+}
+
+/* 1.2. Clearfix */
+.row:before,.row:after,.row-cells:before,.row-cells:after,.row-floats:before,.row-floats:after {
+	content:"";
+	display:table;
+}
+.row:after,.row-cells:after,.row-floats:after {
+	clear:both;
+}
+
+/* 2. DL */
+/* 2.1 Glossary */
+dl.glossary dt,.dl.glossary dd {
+	box-sizing:border-box;
+	margin:0;
+}
+dl.glossary dt {
+	float:left;
+	width:33%;
+	clear:both;
+	margin-bottom: 1em;
+}
+dl.glossary dd {
+	float:right;	
+	width:66%;
+	margin-bottom: 1em;
+}
+
+
+/* 2. HACKS AND VENDOR PREFIXES */
+.row,.row-cells,.row-blocks,.row-floats,
+dl.glossary dt,.dl.glossary dd {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
