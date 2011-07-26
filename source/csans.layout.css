@@ -6,18 +6,18 @@
 
 /* 1. ROWS */
 /* 1.1. Basic styles */
-.row,.row-cells,.row-blocks,.row-floats {
+.row,.row-cells,.row-inline-blocks,.row-floats {
 	width:100%;
 	box-sizing:border-box;
 	list-style:none;
 }
-.row,.row-blocks { display:block; }
+.row,.row-inline-blocks { display:block; }
 .row-cells { display:table; }
 .row-cells > * {
 	display:table-cell;
 	border-collapse:collapse;
 }
-.row-blocks > * {
+.row-inline-blocks > * {
 	display:inline-block;
 	vertical-align:top;
 }
@@ -54,7 +54,7 @@ dl.glossary dd {
 
 
 /* 2. HACKS AND VENDOR PREFIXES */
-.row,.row-cells,.row-blocks,.row-floats,
+.row,.row-cells,.row-inline-blocks,.row-floats,
 dl.glossary dt,.dl.glossary dd {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;

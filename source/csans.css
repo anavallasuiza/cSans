@@ -51,7 +51,10 @@ em,dfn,i { font-style:italic; }
 strong,b { font-weight: bold; }
 small,sub,sup { font-size: 0.75em; }
 mark { background-color: #FF0; }
-abbr[title] { border-bottom: 1px dotted; }
+abbr[title],dfn[title] {
+	border-bottom: 1px dotted;
+	cursor:help;
+}
 
 /* 1.4 Sub and sup elements */
 sub,sup {
@@ -62,6 +65,13 @@ sub,sup {
 }
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
+
+/* 1.5 Quote elements */
+blockquote, q {quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:"";
+	content: none;
+}
 
 /* 1.4 Forms */
 form,fieldset,legend {
@@ -77,27 +87,24 @@ optgroup,option,output,select,textarea {
 	font-family:inherit;
 }
 legend { font-weight:bold; }
-input {
-	margin:0;
-	overflow-y:visible;
-	box-sizing: border-box;
-}
+input { overflow-y:visible; }
 textarea {
 	width:12em;
 	height:4em;
 	overflow-y:auto;
 	display:block;
-	box-sizing: border-box;
 	vertical-align:top;
 }
-select {
-	margin:0;
-	box-sizing: border-box;
-}
 button,input,select,textarea {
+	box-sizing: border-box;
 	vertical-align:baseline;
+	margin:0;
 }
-button,input[type="button"],input[type="reset"],input[type="submit"] { cursor:pointer; }
+button,input[type="button"],input[type="reset"],input[type="submit"] {
+	cursor:pointer;
+	width:auto;
+	overflow:visible;
+}
 
 /* 1.5 Lists */
 ol,ul,dl,dt,dd {
@@ -131,9 +138,17 @@ pre,code {
 	line-height:1.5;
 	white-space:pre;
 }
+pre {
+	white-space:pre;
+	white-space:pre-wrap;
+	white-space:pre-line;
+	word-wrap: break-word;
+}
 
 /* 1.8 HR element */
 hr {
+	display:block;
+	height:1px;
 	background:none;
 	border:none;
 	border-top:1px solid #000;
@@ -277,7 +292,7 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 .upper-roman { list-style-type: upper-roman; }
 
 /* 5. HACKS AND VENDOR PREFIXES */
-input,textarea,select {
+button,input,select,textarea {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
