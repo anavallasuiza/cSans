@@ -156,18 +156,8 @@ hr {
 }
 
 
-/* 2. DEBUG */
-.omg-red,.omg-yellow,.omg-blue,.omg-green,.omg-black,.omg-white { outline: dotted 1px; }
-.omg-red { outline-color:red; }
-.omg-yellow { outline-color:yellow; }
-.omg-blue { outline-color:blue; }
-.omg-green { outline-color:green; }
-.omg-black { outline-color:black; }
-.omg-white { outline-color:white; }
-
-
-/* 3. TEXT STYLES */
-/* 3.1. Titles */
+/* 2. TEXT STYLES */
+/* 2.1. Titles */
 .text h1,.text h2,.text h3,.text h4,.text h5,.text h6 {
 	font-weight:bold;
 	line-height:1.1em;
@@ -186,7 +176,7 @@ hr {
 	margin-top: 0;
 }
 
-/* 3.2 Block elements */
+/* 2.2 Block elements */
 .text address,.text aside,.text audio,.text blockquote,.text canvas,.text details,
 .text dl,.text embed,.text figure,.text form,.text header,.text hgroup,.text hr,.text iframe,
 .text nav,.text object,.text ol,.text p,.text pre,.text summary,.text table,
@@ -204,12 +194,12 @@ hr {
 	list-style-type:disc;
 }
 
-/* 3.3 Floating elements (img, figure) */
+/* 2.3 Floating elements (img, figure) */
 .text .left { margin-right: 1em; }
 .text .right { margin-left: 1em; }
 
-/* 4. UTILS */
-/* 4.1. Images with and without link must overwrite background-image, width and height properties in your css */
+/* 3. UTILS */
+/* 3.1. Images with and without link must overwrite background-image, width and height properties in your css */
 .image a,.image li,.image {
 	background-repeat:no-repeat;
 	background-color:transparent;
@@ -241,7 +231,7 @@ ol.image,ul.image {
 	float:left;
 }
 
-/* 4.2. Convert a block element (like a fieldset) into a inline element */
+/* 3.2. Convert a block element (like a fieldset) into a inline element */
 .inline {
 	margin:0;
 	padding:0;
@@ -250,12 +240,12 @@ ol.image,ul.image {
 ul.inline,ol.inline { list-style:none; margin:0; }
 .inline li { display:inline; }
 
-/* 4.3. Float elements */
+/* 3.3. Float elements */
 .left { float:left !important; }
 .right,.right-right { float:right !important; }
 .right-right { text-align:right !important; }
 
-/* 4.4. Clear (clearfix) */
+/* 3.4. Clear (clearfix) */
 .clear:before,.clear:after {
 	content:"";
 	display:table;
@@ -264,9 +254,9 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 	clear:both;
 }
 
-/* 4.5. Hide an element */
-.hide { display:none; }
-.hide-accesible {
+/* 3.5. Hide an element */
+.hidden { display:none; }
+.hidden-a11y {
 	position: fixed;
 	width: 1px;
 	height: 1px;
@@ -278,10 +268,10 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 	visibility: hidden;
 }
 
-/* 4.6. To make any element behave like a link */
+/* 3.6. To make any element behave like a link */
 .link,.link * { cursor:pointer; text-decoration: underline;}
 
-/* 4.7. List styles */
+/* 3.7. List styles */
 .square,.disc { margin-left:1.5em; }
 .square { list-style-type: square; }
 .disc { list-style-type: disc; }
@@ -291,7 +281,14 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 .lower-roman { list-style-type: lower-roman; }
 .upper-roman { list-style-type: upper-roman; }
 
-/* 5. HACKS AND VENDOR PREFIXES */
+
+/* 3.8. Visible only for old browsers */
+.old-browsers {
+	display:none;
+}
+
+
+/* 4. HACKS AND VENDOR PREFIXES */
 button,input,select,textarea {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -306,14 +303,15 @@ input[type="search"].no-appearance::-webkit-search-results-decoration {
 }
 
 /* Unifique the appearance of inputs and textareas */
-input[type="search"].no-appearance,
-textarea {
+input[type="search"].no-appearance,textarea {
 	-webkit-appearance: textfield;
 	-moz-appearance: textfield;
 }
 input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner,input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+}
+.old-browsers {
+	*display:block; /* IE5-7 */
 }
