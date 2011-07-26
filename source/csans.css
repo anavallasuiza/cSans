@@ -38,7 +38,7 @@ address { font-style: normal; }
 /* 1.3 Inline-block elements */
 audio,canvas,iframe,img,object,embed,video { display:inline-block; }
 
-/* 1.3 Inline elements */
+/* 1.4 Inline elements */
 a,abbr,b,cite,code,command,del,dfn,em,i,ins,kbd,mark,meter,
 progress,q,samp,small,span,strong,sub,sup,time,var {
 	margin:0;
@@ -56,7 +56,7 @@ abbr[title],dfn[title] {
 	cursor:help;
 }
 
-/* 1.4 Sub and sup elements */
+/* 1.5 Sub and sup elements */
 sub,sup {
 	font-size: 75%;
 	line-height: 0;
@@ -66,14 +66,14 @@ sub,sup {
 sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 
-/* 1.5 Quote elements */
+/* 1.6 Quote elements */
 blockquote, q {quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after {
 	content:"";
 	content: none;
 }
 
-/* 1.4 Forms */
+/* 1.7 Forms */
 form,fieldset,legend {
 	margin:0;
 	padding:0;
@@ -106,7 +106,7 @@ button,input[type="button"],input[type="reset"],input[type="submit"] {
 	overflow:visible;
 }
 
-/* 1.5 Lists */
+/* 1.8 Lists */
 ol,ul,dl,dt,dd {
 	display:block;
 	margin:0;
@@ -118,7 +118,7 @@ ol {
 	list-style-type:decimal;
 }
 
-/* 1.6 Tables */
+/* 1.9 Tables */
 table {
 	margin:0;
 	padding:0;
@@ -132,7 +132,7 @@ th,td {
 	border:1px solid #CCC;
 }
 
-/* 1.7 Monospace elements */
+/* 1.10 Monospace elements */
 pre,code {
 	font-family:"Courier New", Courier, monospace;
 	line-height:1.5;
@@ -145,7 +145,7 @@ pre {
 	word-wrap: break-word;
 }
 
-/* 1.8 HR element */
+/* 1.11 HR element */
 hr {
 	display:block;
 	height:1px;
@@ -241,7 +241,7 @@ ol.image,ul.image {
 	float:left;
 }
 
-/* 4.3. Convert a block element (like a fieldset) into a inline element */
+/* 4.2. Convert a block element (like a fieldset) into a inline element */
 .inline {
 	margin:0;
 	padding:0;
@@ -250,12 +250,12 @@ ol.image,ul.image {
 ul.inline,ol.inline { list-style:none; margin:0; }
 .inline li { display:inline; }
 
-/* 4.4. Float elements */
+/* 4.3. Float elements */
 .left { float:left !important; }
 .right,.right-right { float:right !important; }
 .right-right { text-align:right !important; }
 
-/* 4.5. Clear (clearfix) */
+/* 4.4. Clear (clearfix) */
 .clear:before,.clear:after {
 	content:"";
 	display:table;
@@ -264,7 +264,7 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 	clear:both;
 }
 
-/* 4.6. Hide an element */
+/* 4.5. Hide an element */
 .hide { display:none; }
 .hide-accesible {
 	position: fixed;
@@ -278,10 +278,10 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 	visibility: hidden;
 }
 
-/* 4.7. To make any element behave like a link */
+/* 4.6. To make any element behave like a link */
 .link,.link * { cursor:pointer; text-decoration: underline;}
 
-/* 4.8. List styles */
+/* 4.7. List styles */
 .square,.disc { margin-left:1.5em; }
 .square { list-style-type: square; }
 .disc { list-style-type: disc; }
