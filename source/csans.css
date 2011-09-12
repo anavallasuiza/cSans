@@ -271,6 +271,12 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 .upper-roman { list-style-type:upper-roman; }
 
 
+/* 3.7 Target elements */
+.old-browsers {
+	display: none;
+}
+
+
 /* 4. HACKS AND VENDOR PREFIXES */
 button,input,select,textarea {
 	-moz-box-sizing:border-box;
@@ -302,22 +308,3 @@ button::-moz-focus-inner,input::-moz-focus-inner {
 	border:0;
 	padding:0;
 }
-.old-browsers {
-	*display:block; /* IE5-7 */
-}
-
-/* IE 6/7 inline-block */
-audio,canvas,iframe,img,object,embed,video,
-.image a,.image li,.image {
-	*display:inline;
-	*zoom:1;
-}
-
-/* IE images */
-img { -ms-interpolation-mode: bicubic; }
-
-/* Other IE hacks */
-legend { *margin-left:-7px; }
-button,input,select,textarea { *vertical-align:middle; }
-button,input { *overflow:visible; }
-table button,table input { *overflow:auto; }
