@@ -34,28 +34,8 @@
 	clear:both;
 }
 
-/* 2. DL */
-/* 2.1 Glossary */
-dl.glossary dt,.dl.glossary dd {
-	box-sizing:border-box;
-	margin:0;
-}
-dl.glossary dt {
-	float:left;
-	width:33%;
-	clear:both;
-	margin-bottom: 1em;
-}
-dl.glossary dd {
-	float:right;	
-	width:66%;
-	margin-bottom: 1em;
-}
-
-
 /* 2. HACKS AND VENDOR PREFIXES */
-.row,.row-cells,.row-inline-blocks,.row-floats,
-dl.glossary dt,.dl.glossary dd {
+.row,.row-cells,.row-inline-blocks,.row-floats {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
