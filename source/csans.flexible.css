@@ -1,11 +1,13 @@
 /*
  * cSans Flexible v.1.0
+ *
  * 2011 Copyright A navalla suíza http://anavallasuiza.com
  * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
 */
 
 /* 1. BASIC STYLES */
 /* 1.1 Widths */
+.f05 { width:5%; }
 .f10 { width:10%; }
 .f15 { width:15%; }
 .f20 { width:20%; }
@@ -28,7 +30,7 @@
 .f95 { width:95%; }
 .f100 { width:100%; }
 
-.f10,.f15,.f20,.f25,.f30,.f35,.f33,.f40,.f45,.f50,.f55,.f60,.f65,.f66,.f70,.f75,.f80,.f85,.f90,.f95,.f100 {
+.f05,.f10,.f15,.f20,.f25,.f30,.f35,.f33,.f40,.f45,.f50,.f55,.f60,.f65,.f66,.f70,.f75,.f80,.f85,.f90,.f95,.f100 {
 	box-sizing: border-box;
 }
 
@@ -83,6 +85,6 @@
 
 
 /* 2. HACKS AND VENDOR PREFIXES */
-.f10,.f15,.f20,.f25,.f30,.f35,.f33,.f40,.f45,.f50,.f55,.f60,.f65,.f66,.f70,.f75,.f80,.f85,.f90,.f95,.f100 {
+.f05,.f10,.f15,.f20,.f25,.f30,.f35,.f33,.f40,.f45,.f50,.f55,.f60,.f65,.f66,.f70,.f75,.f80,.f85,.f90,.f95,.f100 {
 	-moz-box-sizing: border-box; /* FF */
 }

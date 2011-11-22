@@ -1,5 +1,6 @@
 /*
  * cSans v1.2b
+ *
  * 2011 Copyright A navalla suíza http://anavallasuiza.com
  * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
  *
@@ -225,16 +226,20 @@ a.image,input.image,button.image { cursor:pointer; }
 	height:inherit;
 }
 
-/* 9.3. Convert a block element (like a fieldset) into an inline element */
-.inline {
+/* 9.3. Displays (inline, block, inline-block) */
+.inline,.block,.inline-block {
 	margin:0;
 	padding:0;
-	display:inline;
+	list-style:none;
 }
-ul.inline,ol.inline { list-style:none; margin:0; }
-.inline li { display:inline; }
+.inline { display:inline; }
+.block { display:block; }
+.inline-block { display:inline-block; }
+.inline li,.inline dt,.inline dd { display:inline; }
+.block li,.block dt,.block dd { display:inline; }
+.inline-block li,.inline-block dt,.inline-block dd { display:inline-block; }
 
-/* 3.4. Clear (clearfix) */
+/* 9.4. Clear (clearfix) */
 .clear:before,.clear:after {
 	content:"";
 	display:table;
@@ -243,7 +248,7 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 	clear:both;
 }
 
-/* 3.5. Elements visibility */
+/* 9.5. Elements visibility */
 .hidden { display:none; }
 .invisible { visibility:hidden; }
 .hidden-a11y {
@@ -261,7 +266,7 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 	visibility:hidden;
 }
 
-/* 3.6. List styles */
+/* 9.6. List styles */
 .square { list-style-type:square; }
 .disc { list-style-type:disc; }
 .decimal { list-style-type:decimal; }
@@ -271,7 +276,7 @@ ul.inline,ol.inline { list-style:none; margin:0; }
 .upper-roman { list-style-type:upper-roman; }
 
 
-/* 3.8 Remove paddings, margins, etc */
+/* 9.7 Remove paddings, margins, etc */
 address.reset,article.reset,aside.reset,blockquote.reset,details.reset,
 div.reset,figcaption.reset,figure.reset,footer.reset,h1.reset,h2.reset,h3.reset,h4.reset,h5.reset,h6.reset,
 header.reset,hgroup.reset,nav.reset,p.reset,pre.reset,section.reset,summary.reset,
@@ -285,7 +290,7 @@ header.reset,hgroup.reset,nav.reset,p.reset,pre.reset,section.reset,summary.rese
 }
 
 
-/* 4. HACKS AND VENDOR PREFIXES */
+/* 10. HACKS AND VENDOR PREFIXES */
 button,input,select,textarea {
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
