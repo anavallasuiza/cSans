@@ -38,9 +38,6 @@ optgroup,option,output,select,textarea {
 	_overflow-x:visible; /* IE6 */
 }
 
-/* Double margin in floated elements IE6 */
-.left,.right { display: inline; }
-
 /* Other IE hacks */
 img	{ -ms-interpolation-mode:bicubic; } /* IE7 */
 button,input { *overflow:visible; } /* IE6-7 */
