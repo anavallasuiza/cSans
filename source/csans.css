@@ -1,7 +1,7 @@
 /*
- * cSans v1.2.1
+ * cSans v1.2.2
  *
- * 2011 Copyright A navalla suíza http://anavallasuiza.com
+ * 2012 Copyright A navalla suíza http://anavallasuiza.com
  * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
  *
  * Some code has been extracted from http://necolas.github.com/normalize.css/ (thank you)
@@ -215,6 +215,7 @@ p .right { margin-left:1em; }
 	overflow:hidden;
 	text-align:left;
 	border:none;
+	color:transparent;
 }
 h1.image,h2.image,h3.image,h4.image,h5.image,h6.image { display:block; }
 a.image,input.image,button.image { cursor:pointer; }
