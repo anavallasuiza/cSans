@@ -14,6 +14,13 @@ Features:
 * Solid CSS reset
 * Some universal CSS helpers
 
+What cSans is
+-------------
+
+* Provides a CSS reset for unify all default styles across all modern browsers
+* Provides some universal helpers (image replacement, show/hidden, etc) for generic needs.
+* Provides a universal style (inspired in http://stuffandnonsense.co.uk/blog/about/universal_internet_explorer_6_css/) for old browsers. 
+
 What cSans is not
 -----------------
 
@@ -21,12 +28,6 @@ What cSans is not
 * Not a grid system. It's not good idea for responsive web
 * Not predefined widgets (buttons, forms, etc).
 
- What cSans is
---------------
-
-* Provides a CSS reset for unify all default styles across all modern browsers
-* Provides some universal helpers (image replacement, show/hidden, etc) for generic needs.
-* Provides a universal style (inspired in http://stuffandnonsense.co.uk/blog/about/universal_internet_explorer_6_css/) for old browsers. 
 
 CSS reset
 ---------
@@ -40,18 +41,21 @@ In the file "csans.helpers.css" there are some helpers for generical purposes:
 
 * Float the elements using .left, .right or .right-right (Floats the element and align its contain to right)
 * .image: Image replacement. You must specify the width, height and background-image:
-```css
+
+```CSS
 .logo {
 	background-image: url('my-logo.png');
 	width: 300px;
 	height: 300px;
-} 
+}
 ```
-```html
+
+```HTML
 <span class="image logo">My logo</span>
 
 <span class="image logo"><a href="#">My logo with link</a></span>
 ```
+
 * Change the display property using .inline, .block or .inline-block
 * Apply the clearfix using .clear
 * Hide elements using .hidden, .hidden-a11y (maintaining the accesibility) or .invisible (keep the space)
