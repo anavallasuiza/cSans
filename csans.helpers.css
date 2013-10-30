@@ -1,10 +1,8 @@
 /*
- * cSans Helpers v1.2.2
+ * cSans Helpers v1.3.0
  *
- * 2012 Copyright A navalla suíza http://anavallasuiza.com
+ * 2013 Copyright A navalla suíza http://anavallasuiza.com
  * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
- *
- * Some code has been extracted from http://necolas.github.com/normalize.css/ (thank you)
 */
 
 /* 1 FLOATING ELEMENTS */
@@ -40,20 +38,7 @@ a.image,input.image,button.image { cursor:pointer; }
 	height:inherit;
 }
 
-/* 3. DISPLAYS. inline, block, inline-block */
-.inline,.block,.inline-block {
-	margin:0;
-	padding:0;
-	list-style:none;
-}
-.inline { display:inline; }
-.block { display:block; }
-.inline-block { display:inline-block; }
-.inline li,.inline dt,.inline dd { display:inline; }
-.block li,.block dt,.block dd { display:inline; }
-.inline-block li,.inline-block dt,.inline-block dd { display:inline-block; }
-
-/* 4. CLEAR (clearfix) */
+/* 3. CLEAR (clearfix) */
 .clear:before,.clear:after {
 	content:"";
 	display:table;
@@ -62,10 +47,13 @@ a.image,input.image,button.image { cursor:pointer; }
 	clear:both;
 }
 
-/* 5. ELEMENTS VISIBILITY */
-.hidden { display:none; }
+/* 4. ELEMENTS VISIBILITY */
+.hidden {
+	display:none;
+	visibility:hidden;
+}
 .invisible { visibility:hidden; }
-.hidden-a11y {
+.visually-hidden {
 	border:0 !important;
 	clip:rect(0 0 0 0) !important;
 	position:absolute !important;
@@ -75,18 +63,16 @@ a.image,input.image,button.image { cursor:pointer; }
 	padding:0 !important;
 	margin:-1px !important;
 }
+.visually-hidden.focusable:focus {
+	clip: auto;
+	position: static;
+	overflow: visible;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
 
-/* 6. LIST STYLES */
-.square { list-style-type:square; }
-.disc { list-style-type:disc; }
-.decimal { list-style-type:decimal; }
-.lower-alpha { list-style-type:lower-alpha; }
-.upper-alpha { list-style-type:upper-alpha; }
-.lower-roman { list-style-type:lower-roman; }
-.upper-roman { list-style-type:upper-roman; }
-
-
-/* 7. SEARCH INPUT. Make search input equal in all browsers (with the class .no-appearance) */
+/* 5. SEARCH INPUT. Make search input equal in all browsers (with the class .no-appearance) */
 input[type="search"].no-appearance {
 	-webkit-appearance:textfield;
 	-moz-appearance:textfield;
@@ -97,3 +83,23 @@ input[type="search"].no-appearance::-webkit-search-results-button,
 input[type="search"].no-appearance::-webkit-search-results-decoration {
 	display:none;
 }
+
+/* 6. ASPECT RATIO. Convert videos, iframes, images, etc to be elastic keeping the aspect ratio */
+.aspect-ratio {
+	max-width: 100%;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+}
+.aspect-ratio iframe,.aspect-ratio object,.aspect-ratio embed,.aspect-ratio .aspect-ratio-target {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* some predefined aspect ratios: 16:9 and 4:3 */
+.aspect-ratio-16-9 { padding-bottom: 56.25%; }
+.aspect-ratio-4-3 { padding-bottom: 75%; }

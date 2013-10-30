@@ -32,12 +32,12 @@ What cSans is not
 CSS reset
 ---------
 
-The file "csans.css" contains a solid reset for all html5 elements and brings a strong base to build. So if you only need a simple css reset you can include just this file
+The file "csans.css" contains a solid reset and normalize for all html elements bringing a strong base to build. So if you only need a css reset you can include just this file
 
 Helpers
 -------
 
-In the file "csans.helpers.css" there are some helpers for generical purposes:
+The file "csans.helpers.css" contains some helpers for generical purposes:
 
 * Float the elements using .left, .right or .right-right (Floats the element and align its contain to right)
 * .image: Image replacement. You must specify the width, height and background-image:
@@ -56,10 +56,21 @@ In the file "csans.helpers.css" there are some helpers for generical purposes:
 <span class="image logo"><a href="#">My logo with link</a></span>
 ```
 
-* Change the display property using .inline, .block or .inline-block
 * Apply the clearfix using .clear
-* Hide elements using .hidden, .hidden-a11y (maintaining the accesibility) or .invisible (keep the space)
-* In ul elements, you can change the list-style-type using .square, .disc, .decimal, .lower-alpha, .upper-alpha, .lower-roman, .upper-roman
+* Hide elements using .hidden, .visually-hidden (visible only for screen readers) or .invisible (keep the space)
+* .no-appearance Displays the input[type="search"] in webkit as the rest of the browsers
+* .aspect-ratio Keeps the aspect ratio of iframes or flash elements while make them elastic:
+
+```HTML
+<div class="aspect-ratio aspect-ratio-16-9">
+	<iframe src="youtube-content.html">
+</div>
+
+<!-- By default is applied only to iframe, object and embed, but you can apply to other elements (divs, imgs, videos, etc) using the class .aspect-ratio-target -->
+<div class="aspect-ratio aspect-ratio-4-3">
+	<div class="aspect-ratio-target">This div has an aspect ratio of 4/3</div>
+</div>
+```
 
 Universal styles
 ----------------
