@@ -58,7 +58,7 @@ The file "csans.helpers.css" contains some helpers for generical purposes:
 
 * Apply the clearfix using .clear
 * Hide elements using .hidden, .visually-hidden (visible only for screen readers) or .invisible (keep the space)
-* .no-appearance Displays the input[type="search"] in webkit as the rest of the browsers
+* .no-appearance Displays the input[type="search"] in webkit like the rest of the browsers
 * .aspect-ratio Keeps the aspect ratio of iframes or flash elements while make them elastic:
 
 ```HTML
