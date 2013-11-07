@@ -1,0 +1,97 @@
+/*
+ * cSans ui link v0.1
+ *
+ * 2013 Copyright A navalla suíza http://anavallasuiza.com
+ * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
+*/
+
+/* 1 Generic link */
+.link, form.link button, form.link input[type="submit"] {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	text-decoration: underline;
+	white-space: nowrap;
+	position: relative;
+	background: none;
+	vertical-align: baseline;
+	color: inherit;
+}
+ form.link button, form.link input[type="submit"] {
+ 	text-decoration: inherit;
+ }
+.link:hover {
+	text-decoration: none;
+}
+form.link fieldset {
+	display:inline;
+	margin:0;
+	border:0
+}
+
+/* 2 Links containing input[type="file"] */
+.link input[type="file"] {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+/* 4 Links with select */
+select.link, .link-select select {
+	outline: none;
+}
+select.link option {
+	padding: 0;
+}
+.link-select {
+	background: white;
+
+}
+.link-select select {
+	font-size: inherit;
+	line-height: inherit;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	cursor: pointer;
+	text-decoration: inherit;
+}
+.link-select::after, .link-select::before {
+	content: '';
+	position: absolute;
+	pointer-events: none;
+	text-decoration: none;
+}
+.link-select::before {
+	width: 1.2em;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: inherit;
+}
+.link-select::after {
+	position: absolute;
+	content: "\25BC";
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
+	right: 0;
+	top: 50%;
+	margin-top: -0.5em;
+	pointer-events: none;
+}
+
+
+@supports (-webkit-appearance: none) {
+	.link-select select {
+		padding-right: 1em;
+	}
+}
