@@ -1,6 +1,8 @@
 {
     "name": "cSans",
-    "version": "1.4.1",
-    "ignore": "tests",
+    "version": "1.4.2",
+    "ignore": [
+        "tests"
+    ],
     "dependencies": {}
 }
