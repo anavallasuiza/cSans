@@ -48,9 +48,7 @@ a.image,input.image,button.image { cursor:pointer; }
 }
 
 /* 4. ELEMENTS VISIBILITY */
-.hidden {
-	display:none;
-}
+.hidden { display:none; }
 .invisible { visibility:hidden; }
 .visually-hidden {
 	border:0 !important;
