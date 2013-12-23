@@ -1,5 +1,5 @@
 /*
- * cSans Helpers v1.3.0
+ * cSans Helpers v1.3.1
  *
  * 2013 Copyright A navalla suíza http://anavallasuiza.com
  * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
@@ -50,7 +50,6 @@ a.image,input.image,button.image { cursor:pointer; }
 /* 4. ELEMENTS VISIBILITY */
 .hidden {
 	display:none;
-	visibility:hidden;
 }
 .invisible { visibility:hidden; }
 .visually-hidden {
