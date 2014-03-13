@@ -21,6 +21,8 @@
 }
  form.link button, form.link input[type="submit"] {
  	text-decoration: inherit;
+ 	font-weight: inherit;
+ 	font-family: inherit;
  }
 .link:hover {
 	text-decoration: none;
