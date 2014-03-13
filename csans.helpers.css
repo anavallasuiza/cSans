@@ -1,18 +1,10 @@
 /*
- * cSans Helpers v1.3.1
+ * cSans Helpers
  *
- * 2013 Copyright A navalla suíza http://anavallasuiza.com
- * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
-*/
+ * Some helpers classes for generic purposes
+ */
 
-/* 1 FLOATING ELEMENTS */
-.left { float:left !important; }
-p .left { margin-right:1em; }
-.right,.right-right { float:right !important; }
-.right-right { text-align:right !important; }
-p .right { margin-left:1em; }
-
-/* 2. IMAGE REPLACEMENT. Must overwrite background-image, width and height properties in your css */
+/* Image replacement: Must overwrite background-image, width and height properties in your css */
 .image a,.image {
 	background-repeat:no-repeat;
 	background-color:transparent;
@@ -38,7 +30,7 @@ a.image,input.image,button.image { cursor:pointer; }
 	height:inherit;
 }
 
-/* 3. CLEAR (clearfix) */
+/* Clear: Applies clearfix */
 .clear:before,.clear:after {
 	content:"";
 	display:table;
@@ -47,7 +39,7 @@ a.image,input.image,button.image { cursor:pointer; }
 	clear:both;
 }
 
-/* 4. ELEMENTS VISIBILITY */
+/* Elements visibility */
 .hidden { display:none; }
 .invisible { visibility:hidden; }
 .visually-hidden {
@@ -69,7 +61,7 @@ a.image,input.image,button.image { cursor:pointer; }
 	margin: 0;
 }
 
-/* 5. SEARCH INPUT. Make search input equal in all browsers (with the class .no-appearance) */
+/* Search input: Make search input equal in all browsers (with the class .no-appearance) */
 input[type="search"].no-appearance {
 	-webkit-appearance:textfield;
 	-moz-appearance:textfield;
@@ -81,7 +73,7 @@ input[type="search"].no-appearance::-webkit-search-results-decoration {
 	display:none;
 }
 
-/* 6. ASPECT RATIO. Convert videos, iframes, images, etc to be elastic keeping the aspect ratio */
+/* Aspect ratio: Convert videos, iframes, images, etc to be elastic keeping the aspect ratio */
 .aspect-ratio {
 	max-width: 100%;
 	position: relative;
@@ -97,6 +89,6 @@ input[type="search"].no-appearance::-webkit-search-results-decoration {
 	height: 100%;
 }
 
-/* some predefined aspect ratios: 16:9 and 4:3 */
+/* Some predefined aspect ratios: 16:9 and 4:3 */
 .aspect-ratio-16-9 { padding-bottom: 56.25%; }
 .aspect-ratio-4-3 { padding-bottom: 75%; }

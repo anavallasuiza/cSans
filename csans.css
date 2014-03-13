@@ -1,13 +1,10 @@
 /*
- * cSans v1.3.0
- *
- * 2013 Copyright A navalla suíza http://anavallasuiza.com
- * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
+ * cSans normalizer
  *
  * Some code has been extracted from http://necolas.github.com/normalize.css/ (thank you)
-*/
+ */
 
-/* 1. ROOT ELEMENTS */
+/* Root elements */
 html {
 	font-size:100%;
 	font-family:sans-serif;
@@ -21,8 +18,7 @@ body {
 	margin:0;
 }
 
-/* 2. BLOCK ELEMENTS */
-/* 2.1 Generic */
+/* Block elements */
 audio,canvas,iframe,img,object,embed,video,
 address,article,aside,blockquote,details,div,figcaption,figure,
 footer,h1,h2,h3,h4,h5,h6,header,hgroup,hr,nav,p,pre,section,summary {
@@ -46,7 +42,6 @@ hr {
 	display:none;
 }
 
-/* 2.2. Titles */
 h1,h2,h3,h4,h5,h6 {
 	font-weight:bold;
 	line-height:1.1;
@@ -62,7 +57,7 @@ h3 { font-size:1.2em; }
 h4,h5,h6 { font-size:1em; }
 
 
-/* 3. INLINE-BLOCK ELEMENTS */
+/* Inline block elements */
 audio,canvas,iframe,img,object,embed,video {
 	display:inline-block;
 }
@@ -76,7 +71,7 @@ img {
 }
 
 
-/* 4. INLINE ELEMENTS */
+/* Inline elements */
 a,abbr,b,cite,code,command,del,dfn,em,i,ins,kbd,mark,meter,q,
 samp,small,span,strong,sub,sup,time,var {
 	margin:0;
@@ -103,7 +98,6 @@ mark {
 	color:#000;
 }
 
-/* 4.1 Sub and sup elements */
 sub,sup {
 	font-size:75%;
 	line-height:0;
@@ -113,7 +107,6 @@ sub,sup {
 sup { top:-0.5em; }
 sub { bottom:-0.25em; }
 
-/* 4.2 Quote elements */
 blockquote, q {quotes:none;}
 blockquote:before,blockquote:after,q:before,q:after {
 	content:"";
@@ -121,7 +114,7 @@ blockquote:before,blockquote:after,q:before,q:after {
 }
 
 
-/* 5. FORMS */
+/* Forms */
 form,fieldset,legend {
 	margin:0;
 	padding:0;
@@ -162,7 +155,7 @@ input[type="checkbox"],input[type="radio"] { padding:0; }
 button[disabled],html input[disabled] { cursor:default; }
 
 
-/* 6. LISTS */
+/* Lists */
 ol,ul,dl,dt,dd {
 	margin:0;
 	padding:0;
@@ -173,7 +166,7 @@ ol { list-style-type:decimal; }
 ul { list-style-type:disc; }
 
 
-/* 7. TABLES */
+/* Tables */
 table {
 	margin:0;
 	padding:0;
@@ -188,7 +181,7 @@ th,td {
 }
 
 
-/* 8 MONOSPACE ELEMENTS */
+/* Monospace elements */
 pre,code,kbd,samp {
 	font-family:"Courier new",Courier,monospace;
 	line-height:1.5;
@@ -202,7 +195,7 @@ pre {
 }
 
 
-/* 9. HACKS AND VENDOR PREFIXES */
+/* Hacks and vendor prefixes */
 html {
 	-ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -216,6 +209,7 @@ textarea {
 	-moz-appearance:textfield;
 }
 hr { -moz-box-sizing: content-box; }
+
 
 /* Unifique the appearance of inputs and textareas */
 input[type="search"]::-webkit-search-decoration { -webkit-appearance:none; }

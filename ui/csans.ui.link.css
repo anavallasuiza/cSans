@@ -1,11 +1,11 @@
 /*
- * cSans ui link v0.1
+ * cSans ui link
  *
- * 2013 Copyright A navalla suíza http://anavallasuiza.com
- * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
-*/
+ * Generic classes to generate links with any html element
+ * (it's like cSans buttons but with link appearance)
+ */
 
-/* 1 Generic link */
+/* Generic link */
 .link, form.link button, form.link input[type="submit"] {
 	display: inline-block;
 	margin: 0;
@@ -31,7 +31,7 @@ form.link fieldset {
 	border:0
 }
 
-/* 2 Links containing input[type="file"] */
+/* Links containing input[type="file"] */
 .link input[type="file"] {
 	opacity: 0;
 	position: absolute;
@@ -40,7 +40,7 @@ form.link fieldset {
 	cursor: pointer;
 }
 
-/* 4 Links with select */
+/* Links with select */
 select.link, .link-select select {
 	outline: none;
 }
@@ -88,7 +88,6 @@ select.link option {
 	margin-top: -0.5em;
 	pointer-events: none;
 }
-
 
 @supports (-webkit-appearance: none) {
 	.link-select select {

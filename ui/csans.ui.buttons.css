@@ -1,11 +1,11 @@
 /*
- * cSans ui buttons v0.1
+ * cSans ui buttons
  *
- * 2013 Copyright A navalla suíza http://anavallasuiza.com
- * cSans is released under the GNU Affero GPL version 3 - more information at http://www.fsf.org/licensing/licenses/agpl-3.0.html
-*/
+ * Generic classes to generate buttons with any html element
+ * It support also <select> to create dropdown menu
+ */
 
-/* 1 Generic button */
+/* Generic button */
 .button {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -26,12 +26,14 @@
 	color: black;
 	font-size: 1em;
 	line-height: 1.25;
+	max-width: 100%;
+	text-overflow: ellipsis;
 }
 .button:hover {
 	background: #999;
 }
 
-/* 2 Forms made button */
+/* Forms made button */
 form.button {
 	padding: 0;
 }
@@ -50,7 +52,7 @@ form.button input[type="submit"] {
 	line-height: inherit;
 }
 
-/* 3 Buttons containing input[type="file"] */
+/* Buttons containing input[type="file"] */
 .button input[type="file"] {
 	opacity: 0;
 	position: absolute;
@@ -59,7 +61,7 @@ form.button input[type="submit"] {
 	cursor: pointer;
 }
 
-/* 4 Buttons with select */
+/* Buttons with select */
 select.button {
 	line-height: 1;
 	padding-right: 0.7em;
