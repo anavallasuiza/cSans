@@ -3,22 +3,18 @@ cSans CSS framework
 
 Created by Oscar Otero <http://oscarotero.com> <http://anavallasuiza.com> <oom@oscarotero.com>
 
-GNU Affero GPL version 3. http://www.gnu.org/licenses/agpl-3.0.html
-
 cSans is a css framework focused to work with css3 and html5. Supported only by modern browsers and IE8+.
 
 Features:
 
-* Support for all modern browsers, mobiles and IE8+
-* Support for HTML5
-* Provides a CSS reset for unify all default styles across all modern browsers
+* Support for all HTML5 modern browsers, mobiles and IE8+
+* Provides a CSS normalizer to unify all default styles across all browsers
 * Provides some universal helpers (image replacement, show/hidden, etc) for generic needs.
-* Provides some universal css styles for ui widgets (buttons, etc)
-* Provides a universal style (inspired in http://stuffandnonsense.co.uk/blog/about/universal_internet_explorer_6_css/) for old browsers.
+* Provides some universal css styles for ui widgets (buttons, links)
 
 
-CSS reset
----------
+CSS normalizer
+--------------
 
 The file "csans.css" contains a solid reset and normalize for all html elements bringing a strong base to build. So if you only need a css reset you can include just this file
 
@@ -27,7 +23,6 @@ Helpers
 
 The file "csans.helpers.css" contains some helpers for generical purposes:
 
-* Float the elements using .left, .right or .right-right (Floats the element and align its contain to right)
 * .image: Image replacement. You must specify the width, height and background-image:
 
 ```CSS
@@ -63,23 +58,7 @@ The file "csans.helpers.css" contains some helpers for generical purposes:
 UI
 --
 
-The main purpose of the ui classes is to provide some basic css rules to build your own ui widgets. It's not a framework with predefined styles (like bootstrap, jquery.ui, etc), but it's a collection of some css clases that you can extend and customize. In tests/ui.html you can see some examples.
+The main purpose of the ui classes is to provide some basic css rules to build your own ui widgets. It's not a framework with predefined styles (like bootstrap, jquery.ui, etc), but it's a collection of some css classes that you can extend and customize. In tests/ui.html you can see some examples.
 
 * .button Generic class to build a button using any html element (button, span, link, input, etc). Using .button-select, you can create a simple dropdown with a select element with pure css.
 * .link It's a generic class to build link-style elements. It's like .button, but for links. You can create links also with selects and there is the .link-select class to create a dropdown element with link appearance.
-
-Universal styles
-----------------
-
-People with old browsers (ie7, ie6 or even ie5) should access to web content but it's difficult to create a great interface that works in these browsers. It's better create a simple universal style for these browsers that provides a more confortable way to access to de content:
-
-```html
-<!--[if gte IE 8]><!-->
-<link href="csans.css" type="text/css" rel="stylesheet" />
-<link href="csans.helpers.css" type="text/css" rel="stylesheet" />
-<!-- <![endif]-->
-
-<!--[if lte IE 7]>
-<link href="csans.universal-styles.css" type="text/css" rel="stylesheet" />
-<![endif]-->
-```
