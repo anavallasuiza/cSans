@@ -49,7 +49,9 @@ form.button input[type="submit"] {
 	padding: 0.3em 1em;
 	margin: 0;
 	font-size: inherit;
+	font-family: inherit;
 	line-height: inherit;
+	color: inherit;
 }
 
 /* Buttons containing input[type="file"] */
