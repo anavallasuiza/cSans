@@ -50,6 +50,7 @@ form.button input[type="submit"] {
 	margin: 0;
 	font-size: inherit;
 	font-family: inherit;
+	font-weight: inherit;
 	line-height: inherit;
 	color: inherit;
 }
@@ -122,4 +123,13 @@ select.button option {
 	.button-select select {
 		padding-right: 2.5em;
 	}
+}
+
+/* Disabled button */
+.button[disabled],
+form.button [disabled],
+.button-select [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
 }

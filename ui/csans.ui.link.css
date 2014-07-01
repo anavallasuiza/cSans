@@ -96,3 +96,12 @@ select.link option {
 		padding-right: 1em;
 	}
 }
+
+/* Disabled link */
+.link[disabled],
+form.link [disabled],
+.link-select [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}
