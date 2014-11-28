@@ -30,7 +30,7 @@
 	text-overflow: ellipsis;
 }
 .button:hover {
-	background: #999;
+	background-color: #999;
 }
 
 /* Forms made button */
