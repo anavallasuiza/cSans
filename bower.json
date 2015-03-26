@@ -1,6 +1,7 @@
 {
     "name": "csans",
     "description": "Collection of useful css classes",
+    "version": "2.0.1",
     "homepage": "https://github.com/oscarotero/cSans",
     "license": "MIT",
     "main": "dist/csans.css",

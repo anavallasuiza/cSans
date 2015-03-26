@@ -1,11 +1,15 @@
-# csans CSS framework
+# csans
 
-Created by Oscar Otero <http://oscarotero.com> <http://anavallasuiza.com> <oom@oscarotero.com>
+Created by Oscar Otero <http://oscarotero.com> <oom@oscarotero.com>
+
+License: MIT
 
 This project contains a set of opinionated css classes that you can use in your web projects. Support for all HTML5 modern browsers, mobiles and IE9+
 
 
 ## Image replacement
+
+Use the class `image` combinated with other class providing the image, with and height. Example:
 
 ```css
 .logo {
@@ -23,7 +27,7 @@ This project contains a set of opinionated css classes that you can use in your 
 
 ## Aspect ratio
 
-Keeps the aspect ratio of iframes or flash elements while make them elastic:
+Keeps the aspect ratio of `<iframes>`, `<embed>` or any other element while make them elastic:
 
 ```html
 <div class="aspect-ratio aspect-ratio-16-9">
