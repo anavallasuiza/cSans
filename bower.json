@@ -7,9 +7,12 @@
         "clearfix",
         "aspect ratio"
     ],
-    "version": "2.0",
     "authors": [
         "Oscar Otero <oom@oscarotero.com>"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/oscarotero/cSans.git"
+    },
     "license": "MIT"
 }
