@@ -1,18 +1,23 @@
 {
     "name": "csans",
     "description": "Collection of useful css classes",
+    "homepage": "https://github.com/oscarotero/cSans",
+    "license": "MIT",
+    "main": "dist/csans.css",
     "keywords": [
         "css",
         "buttons",
         "clearfix",
         "aspect ratio"
     ],
-    "authors": [
-        "Oscar Otero <oom@oscarotero.com>"
-    ],
     "repository": {
         "type": "git",
-        "url": "git://github.com/oscarotero/cSans.git"
+        "url": "git@github.com:oscarotero/cSans.git"
     },
-    "license": "MIT"
+    "authors": [
+        {
+            "name": "Oscar Otero",
+            "email": "oom@oscarotero.com"
+        }
+    ]
 }
