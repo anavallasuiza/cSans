@@ -1,0 +1,47 @@
+/*
+================================
+Image replacement.
+================================
+
+You must set the background-image, width and height.
+For example:
+
+.image.logo {
+	width: 220px;
+	height: 120px;
+	background-image: url('my-logo.png');
+}
+*/
+
+.image a,
+.image {
+	background-repeat: no-repeat;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-size: 0px !important;
+	line-height: 0em !important;
+	letter-spacing: -20px;
+	text-indent: -2px;
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+	border: none;
+	color: transparent;
+}
+
+:matches(h1, h2, h3, h4, h5, h6).image {
+	display: block;
+}
+
+:matches(a, input, button).image {
+	cursor:pointer;
+}
+
+.image a {
+	display:block;
+	width:100%;
+	height:100%;
+	height:inherit;
+}

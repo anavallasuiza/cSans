@@ -1,0 +1,516 @@
+
+/*
+================================
+Image replacement.
+================================
+
+You must set the background-image, width and height.
+For example:
+
+.image.logo {
+	width: 220px;
+	height: 120px;
+	background-image: url('my-logo.png');
+}
+*/
+
+.image a, .image {
+	background-repeat: no-repeat;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-size: 0px !important;
+	line-height: 0em !important;
+	letter-spacing: -20px;
+	text-indent: -2px;
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+	border: none;
+	color: transparent;
+}
+
+h1.image, h2.image, h3.image, h4.image, h5.image, h6.image {
+	display: block;
+}
+
+a.image, input.image, button.image {
+	cursor: pointer;
+}
+
+.image a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	height: inherit;
+}
+
+
+/*
+================================
+Aspect ratio
+================================
+
+Convert videos, iframes, images, etc to be elastic keeping the aspect ratio
+Example:
+
+<div class="aspect-ratio aspect-ratio-16-9">
+	<iframe src="https://www.youtube.com/embed/hsnBK90QGzo" frameborder="0" allowfullscreen></iframe>
+</div>
+*/
+
+.aspect-ratio {
+	max-width: 100%;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+}
+
+.aspect-ratio iframe, .aspect-ratio object, .aspect-ratio embed, .aspect-ratio .aspect-ratio-target {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Some predefined aspect ratios: */
+
+.aspect-ratio-16-9 {
+	padding-bottom: 56.25%;
+}
+
+.aspect-ratio-4-3 {
+	padding-bottom: 75%;
+}
+
+
+/*
+================================
+Clearfix
+================================
+
+Simple clearfix hack.
+More info: http://www.cssmojo.com/latest_new_clearfix_so_far/
+*/
+
+.clear::before, .clear::after {
+	content: "";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+
+/*
+================================
+Change the visibility of some elements
+================================
+*/
+
+
+/* Hide the element */
+
+.hidden {
+	display: none;
+}
+
+
+/* Hide de element but maintain the layout */
+
+.invisible {
+	visibility: hidden;
+}
+
+
+/*
+* Hide only visually, but have it available for screen readers:
+* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*/
+
+.visuallyhidden {
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	margin: -1px !important;
+}
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	position: static;
+	overflow: visible;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
+
+
+/*
+================================
+Buttons
+================================
+
+Generic classes to generate buttons with any html element
+It support also <select> to create dropdown menu
+Example:
+
+<a href="" class="button">click me</a>
+<button class="button">click me</button>
+<span class="button">click me</span>
+<input type="submit" class="button" value="click me">
+<select class="button"></select>
+etc...
+*/
+
+
+/* Generic button */
+
+.button {
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 0.3em 1em;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	text-decoration: none;
+	font-style: normal;
+	white-space: nowrap;
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+	background: #ccc;
+	color: black;
+	font-size: 1em;
+	line-height: 1.25;
+	max-width: 100%;
+	text-overflow: ellipsis;
+}
+
+.button:hover {
+	background-color: #999;
+}
+
+
+/*
+Forms made button:
+
+<form class="button" method="post">
+	<input type="submit" value="send">
+</form>
+*/
+
+form.button {
+	padding: 0;
+}
+
+form.button fieldset {
+	display: inline;
+	margin: 0;
+	border: 0;
+}
+
+form.button button, form.button input[type="submit"] {
+	background: none;
+	border: 0;
+	padding: 0.3em 1em;
+	margin: 0;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+
+/*
+Buttons containing file inputs:
+
+<label class="button">
+	Upload a file
+	<input type="file">
+</label>
+*/
+
+.button input[type="file"] {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+
+/* Buttons with select */
+
+select.button {
+	line-height: 1;
+	padding-right: 0.7em;
+	padding-left: 0.7em;
+	outline: none;
+}
+
+select.button option {
+	padding: 0 0.5em;
+}
+
+
+/* Disabled button */
+
+.button[disabled], form.button [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+
+/*
+================================
+Button select
+================================
+
+Select converted in a button just with css
+More info: http://css.dzone.com/articles/making-html-dropdowns-not-suck
+Example:
+
+<span class="button-select">
+	<select>
+		<option>Option 1</option>
+		<option>Option 2</option>
+	</select>
+</span>
+*/
+
+.button-select {
+	padding: 0;
+}
+
+.button-select select {
+	font-size: inherit;
+	line-height: inherit;
+	padding: 0.3em 1em;
+	margin: 0;
+	border: none;
+	background: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	outline: none;
+}
+
+.button-select option {
+	padding-right: 1.5em;
+}
+
+.button-select::after, .button-select::before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+}
+
+.button-select::before {
+	width: 2.3em;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 0 4px 4px 0;
+	background: inherit;
+}
+
+.button-select::after {
+	position: absolute;
+	content: "\25BC";
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
+	right: 1em;
+	top: 50%;
+	margin-top: -0.5em;
+	pointer-events: none;
+}
+
+@supports (-webkit-appearance: none) {
+	.button-select select {
+		padding-right: 2.5em;
+	}
+	
+}
+
+
+/* Disabled button */
+
+.button-select [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+
+/*
+================================
+Links
+================================
+
+Generate links with any html element
+(it's like cSans buttons but with link appearance)
+*/
+
+
+/* Generic link */
+
+.link, form.link button, form.link input[type="submit"] {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	text-decoration: underline;
+	white-space: nowrap;
+	position: relative;
+	background: none;
+	vertical-align: baseline;
+	color: inherit;
+}
+
+.link:hover, form.link button:hover, form.link input[type="submit"]:hover {
+	text-decoration: none;
+}
+
+
+/* Form made link */
+
+form.link button, form.link input[type="submit"] {
+	text-decoration: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+}
+
+form.link fieldset {
+	display: inline;
+	margin: 0;
+	border: 0;
+}
+
+
+/* Links containing input[type="file"] */
+
+.link input[type="file"] {
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}
+
+
+/* Links with select */
+
+select.link {
+	outline: none;
+}
+
+select.link option {
+	padding: 0;
+}
+
+
+/* Disabled link */
+
+.link[disabled], form.link [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+
+/*
+================================
+Link select
+================================
+
+Select converted in a link just with css
+More info: http://css.dzone.com/articles/making-html-dropdowns-not-suck
+Example:
+
+<span class="link-select">
+	<select>
+		<option>Option 1</option>
+		<option>Option 2</option>
+	</select>
+</span>
+*/
+
+.link-select {
+	background: white;
+}
+
+.link-select select {
+	outline: none;
+	font-size: inherit;
+	line-height: inherit;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	text-decoration: inherit;
+}
+
+.link-select::after, .link-select::before {
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	text-decoration: none;
+}
+
+.link-select::before {
+	width: 1.2em;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: inherit;
+}
+
+.link-select::after {
+	position: absolute;
+	content: "\25BC";
+	height: 1em;
+	font-size: 1em;
+	line-height: 1;
+	right: 0;
+	top: 50%;
+	margin-top: -0.5em;
+	pointer-events: none;
+}
+
+@supports (-webkit-appearance: none) {
+	.link-select select {
+		padding-right: 1em;
+	}
+	
+}
+
+
+/* Disabled link */
+
+.link-select [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+
+/*# sourceMappingURL=csans.map */

@@ -1,0 +1,40 @@
+/*
+================================
+Aspect ratio
+================================
+
+Convert videos, iframes, images, etc to be elastic keeping the aspect ratio
+Example:
+
+<div class="aspect-ratio aspect-ratio-16-9">
+	<iframe src="https://www.youtube.com/embed/hsnBK90QGzo" frameborder="0" allowfullscreen></iframe>
+</div>
+*/
+
+.aspect-ratio {
+	max-width: 100%;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	padding: 0;
+
+	iframe,
+	object,
+	embed,
+	.aspect-ratio-target {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* Some predefined aspect ratios: */
+.aspect-ratio-16-9 {
+	padding-bottom: 56.25%;
+}
+
+.aspect-ratio-4-3 {
+	padding-bottom: 75%;
+}

@@ -1,0 +1,74 @@
+/*
+================================
+Link select
+================================
+
+Select converted in a link just with css
+More info: http://css.dzone.com/articles/making-html-dropdowns-not-suck
+Example:
+
+<span class="link-select">
+	<select>
+		<option>Option 1</option>
+		<option>Option 2</option>
+	</select>
+</span>
+*/
+
+.link-select {
+	background: white;
+
+	select {
+		outline: none;
+		font-size: inherit;
+		line-height: inherit;
+		padding: 0;
+		margin: 0;
+		border: none;
+		background: none;
+		appearance: none;
+		cursor: pointer;
+		text-decoration: inherit;
+	}
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		text-decoration: none;
+	}
+
+	&::before {
+		width: 1.2em;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: inherit;
+	}
+
+	&::after {
+		position: absolute;
+		content: "\25BC";
+		height: 1em;
+		font-size: 1em;
+		line-height: 1;
+		right: 0;
+		top: 50%;
+		margin-top: -0.5em;
+		pointer-events: none;
+	}
+}
+
+@supports (-webkit-appearance: none) {
+	.link-select select {
+		padding-right: 1em;
+	}
+}
+
+/* Disabled link */
+.link-select [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}

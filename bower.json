@@ -1,8 +1,15 @@
 {
     "name": "csans",
-    "version": "1.5.0",
-    "ignore": [
-        "tests"
+    "description": "Collection of useful css classes",
+    "keywords": [
+        "css",
+        "buttons",
+        "clearfix",
+        "aspect ratio"
     ],
-    "dependencies": {}
+    "version": "2.0",
+    "authors": [
+        "Oscar Otero <oom@oscarotero.com>"
+    ],
+    "license": "MIT"
 }

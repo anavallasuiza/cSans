@@ -1,0 +1,77 @@
+/*
+================================
+Button select
+================================
+
+Select converted in a button just with css
+More info: http://css.dzone.com/articles/making-html-dropdowns-not-suck
+Example:
+
+<span class="button-select">
+	<select>
+		<option>Option 1</option>
+		<option>Option 2</option>
+	</select>
+</span>
+*/
+
+.button-select {
+	padding: 0;
+
+	select {
+		font-size: inherit;
+		line-height: inherit;
+		padding: 0.3em 1em;
+		margin: 0;
+		border: none;
+		background: none;
+		appearance: none;
+		cursor: pointer;
+		outline: none;
+	}
+
+	option {
+		padding-right: 1.5em;
+	}
+
+	&::after,
+	&::before {
+		content: '';
+		position: absolute;
+		pointer-events: none;
+	}
+
+	&::before {
+		width: 2.3em;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 0 4px 4px 0;
+		background: inherit;
+	}
+
+	&::after {
+		position: absolute;
+		content: "\25BC";
+		height: 1em;
+		font-size: 1em;
+		line-height: 1;
+		right: 1em;
+		top: 50%;
+		margin-top: -0.5em;
+		pointer-events: none;
+	}
+}
+
+@supports (-webkit-appearance: none) {
+	.button-select select {
+		padding-right: 2.5em;
+	}
+}
+
+/* Disabled button */
+.button-select [disabled] {
+	cursor: default;
+	opacity: 0.5;
+	pointer-events: none;
+}
