@@ -1,54 +1,6 @@
 
 /*
 ================================
-Image replacement.
-================================
-
-You must set the background-image, width and height.
-For example:
-
-.image.logo {
-	width: 220px;
-	height: 120px;
-	background-image: url('my-logo.png');
-}
-*/
-
-.image a, .image {
-	background-repeat: no-repeat;
-	background-color: transparent;
-	margin: 0;
-	padding: 0;
-	outline: none;
-	font-size: 0px !important;
-	line-height: 0em !important;
-	letter-spacing: -20px;
-	text-indent: -2px;
-	display: inline-block;
-	overflow: hidden;
-	text-align: left;
-	border: none;
-	color: transparent;
-}
-
-h1.image, h2.image, h3.image, h4.image, h5.image, h6.image {
-	display: block;
-}
-
-a.image, input.image, button.image {
-	cursor: pointer;
-}
-
-.image a {
-	display: block;
-	width: 100%;
-	height: 100%;
-	height: inherit;
-}
-
-
-/*
-================================
 Aspect ratio
 ================================
 
@@ -59,7 +11,6 @@ Example:
 	<iframe src="https://www.youtube.com/embed/hsnBK90QGzo" frameborder="0" allowfullscreen></iframe>
 </div>
 */
-
 .aspect-ratio {
 	max-width: 100%;
 	position: relative;
@@ -67,92 +18,24 @@ Example:
 	overflow: hidden;
 	padding: 0;
 }
-
-.aspect-ratio iframe, .aspect-ratio object, .aspect-ratio embed, .aspect-ratio .aspect-ratio-target {
+.aspect-ratio iframe,
+.aspect-ratio object,
+.aspect-ratio embed,
+.aspect-ratio .aspect-ratio-target {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100% !important;
+	height: 100% !important;
 }
 
-
 /* Some predefined aspect ratios: */
-
 .aspect-ratio-16-9 {
 	padding-bottom: 56.25%;
 }
-
 .aspect-ratio-4-3 {
 	padding-bottom: 75%;
 }
-
-
-/*
-================================
-Clearfix
-================================
-
-Simple clearfix hack.
-More info: http://www.cssmojo.com/latest_new_clearfix_so_far/
-*/
-
-.clear::before, .clear::after {
-	content: "";
-	display: table;
-}
-
-.clear::after {
-	clear: both;
-}
-
-
-/*
-================================
-Change the visibility of some elements
-================================
-*/
-
-
-/* Hide the element */
-
-.hidden {
-	display: none;
-}
-
-
-/* Hide de element but maintain the layout */
-
-.invisible {
-	visibility: hidden;
-}
-
-
-/*
-* Hide only visually, but have it available for screen readers:
-* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*/
-
-.visuallyhidden {
-	border: 0 !important;
-	clip: rect(0 0 0 0) !important;
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	margin: -1px !important;
-}
-
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
-	clip: auto;
-	position: static;
-	overflow: visible;
-	width: auto;
-	height: auto;
-	margin: 0;
-}
-
 
 /*
 ================================
@@ -171,9 +54,7 @@ Example:
 etc...
 */
 
-
 /* Generic button */
-
 .button {
 	box-sizing: border-box;
 	display: inline-block;
@@ -196,11 +77,6 @@ etc...
 	text-overflow: ellipsis;
 }
 
-.button:hover {
-	background-color: #999;
-}
-
-
 /*
 Forms made button:
 
@@ -208,18 +84,16 @@ Forms made button:
 	<input type="submit" value="send">
 </form>
 */
-
 form.button {
 	padding: 0;
 }
-
 form.button fieldset {
 	display: inline;
 	margin: 0;
 	border: 0;
 }
-
-form.button button, form.button input[type="submit"] {
+form.button button,
+form.button input[type='submit'] {
 	background: none;
 	border: 0;
 	padding: 0.3em 1em;
@@ -231,7 +105,6 @@ form.button button, form.button input[type="submit"] {
 	color: inherit;
 }
 
-
 /*
 Buttons containing file inputs:
 
@@ -240,8 +113,7 @@ Buttons containing file inputs:
 	<input type="file">
 </label>
 */
-
-.button input[type="file"] {
+.button input[type='file'] {
 	opacity: 0;
 	position: absolute;
 	left: 0;
@@ -249,29 +121,24 @@ Buttons containing file inputs:
 	cursor: pointer;
 }
 
-
 /* Buttons with select */
-
 select.button {
 	line-height: 1;
 	padding-right: 0.7em;
 	padding-left: 0.7em;
 	outline: none;
 }
-
 select.button option {
 	padding: 0 0.5em;
 }
 
-
 /* Disabled button */
-
-.button[disabled], form.button [disabled] {
+.button[disabled],
+form.button [disabled] {
 	cursor: default;
 	opacity: 0.5;
 	pointer-events: none;
 }
-
 
 /*
 ================================
@@ -289,11 +156,9 @@ Example:
 	</select>
 </span>
 */
-
 .button-select {
 	padding: 0;
 }
-
 .button-select select {
 	font-size: inherit;
 	line-height: inherit;
@@ -301,23 +166,21 @@ Example:
 	margin: 0;
 	border: none;
 	background: none;
-	-moz-appearance: none;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 	cursor: pointer;
 	outline: none;
 }
-
 .button-select option {
 	padding-right: 1.5em;
 }
-
-.button-select::after, .button-select::before {
-	content: "";
+.button-select::after,
+.button-select::before {
+	content: '';
 	position: absolute;
 	pointer-events: none;
 }
-
 .button-select::before {
 	width: 2.3em;
 	right: 0;
@@ -326,10 +189,9 @@ Example:
 	border-radius: 0 4px 4px 0;
 	background: inherit;
 }
-
 .button-select::after {
 	position: absolute;
-	content: "\25BC";
+	content: '\25BC';
 	height: 1em;
 	font-size: 1em;
 	line-height: 1;
@@ -343,18 +205,81 @@ Example:
 	.button-select select {
 		padding-right: 2.5em;
 	}
-	
 }
-
-
 /* Disabled button */
-
 .button-select [disabled] {
 	cursor: default;
 	opacity: 0.5;
 	pointer-events: none;
 }
 
+/*
+================================
+Clearfix
+================================
+
+Simple clearfix hack.
+More info: http://www.cssmojo.com/latest_new_clearfix_so_far/
+*/
+.clearfix::before,
+.clearfix::after {
+	content: '';
+	display: table;
+}
+.clearfix::after {
+	clear: both;
+}
+
+/*
+================================
+Image replacement.
+================================
+
+You must set the background-image, width and height.
+For example:
+
+.image.logo {
+	width: 220px;
+	height: 120px;
+	background-image: url('my-logo.png');
+}
+*/
+.image a,
+.image {
+	background-repeat: no-repeat;
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-size: 0px !important;
+	line-height: 0em !important;
+	letter-spacing: -20px;
+	text-indent: -2px;
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+	border: none;
+	color: transparent;
+}
+h1.image,
+h2.image,
+h3.image,
+h4.image,
+h5.image,
+h6.image {
+	display: block;
+}
+a.image,
+input.image,
+button.image {
+	cursor: pointer;
+}
+.image a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	height: inherit;
+}
 
 /*
 ================================
@@ -365,10 +290,10 @@ Generate links with any html element
 (it's like cSans buttons but with link appearance)
 */
 
-
 /* Generic link */
-
-.link, form.link button, form.link input[type="submit"] {
+.link,
+form.link button,
+form.link input[type='submit'] {
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -381,30 +306,27 @@ Generate links with any html element
 	vertical-align: baseline;
 	color: inherit;
 }
-
-.link:hover, form.link button:hover, form.link input[type="submit"]:hover {
+.link:hover,
+form.link button:hover,
+form.link input[type='submit']:hover {
 	text-decoration: none;
 }
 
-
 /* Form made link */
-
-form.link button, form.link input[type="submit"] {
+form.link button,
+form.link input[type='submit'] {
 	text-decoration: inherit;
 	font-weight: inherit;
 	font-family: inherit;
 }
-
 form.link fieldset {
 	display: inline;
 	margin: 0;
 	border: 0;
 }
 
-
 /* Links containing input[type="file"] */
-
-.link input[type="file"] {
+.link input[type='file'] {
 	opacity: 0;
 	position: absolute;
 	left: 0;
@@ -412,26 +334,21 @@ form.link fieldset {
 	cursor: pointer;
 }
 
-
 /* Links with select */
-
 select.link {
 	outline: none;
 }
-
 select.link option {
 	padding: 0;
 }
 
-
 /* Disabled link */
-
-.link[disabled], form.link [disabled] {
+.link[disabled],
+form.link [disabled] {
 	cursor: default;
 	opacity: 0.5;
 	pointer-events: none;
 }
-
 
 /*
 ================================
@@ -449,11 +366,9 @@ Example:
 	</select>
 </span>
 */
-
 .link-select {
 	background: white;
 }
-
 .link-select select {
 	outline: none;
 	font-size: inherit;
@@ -462,20 +377,19 @@ Example:
 	margin: 0;
 	border: none;
 	background: none;
-	-moz-appearance: none;
 	-webkit-appearance: none;
+	-moz-appearance: none;
 	appearance: none;
 	cursor: pointer;
 	text-decoration: inherit;
 }
-
-.link-select::after, .link-select::before {
-	content: "";
+.link-select::after,
+.link-select::before {
+	content: '';
 	position: absolute;
 	pointer-events: none;
 	text-decoration: none;
 }
-
 .link-select::before {
 	width: 1.2em;
 	right: 0;
@@ -483,10 +397,9 @@ Example:
 	bottom: 0;
 	background: inherit;
 }
-
 .link-select::after {
 	position: absolute;
-	content: "\25BC";
+	content: '\25BC';
 	height: 1em;
 	font-size: 1em;
 	line-height: 1;
@@ -500,17 +413,52 @@ Example:
 	.link-select select {
 		padding-right: 1em;
 	}
-	
 }
-
-
 /* Disabled link */
-
 .link-select [disabled] {
 	cursor: default;
 	opacity: 0.5;
 	pointer-events: none;
 }
 
+/*
+================================
+Change the visibility of some elements
+================================
+*/
+
+/* Hide the element */
+.hidden {
+	display: none;
+}
+
+/* Hide de element but maintain the layout */
+.invisible {
+	visibility: hidden;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*/
+.visuallyhidden {
+	border: 0 !important;
+	clip: rect(0 0 0 0) !important;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	margin: -1px !important;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	position: static;
+	overflow: visible;
+	width: auto;
+	height: auto;
+	margin: 0;
+}
 
 /*# sourceMappingURL=csans.map */

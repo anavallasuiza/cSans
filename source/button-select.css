@@ -15,7 +15,7 @@ Example:
 </span>
 */
 
-.button-select {
+%csans-button-select {
 	padding: 0;
 
 	select {
@@ -64,13 +64,13 @@ Example:
 }
 
 @supports (-webkit-appearance: none) {
-	.button-select select {
+	%csans-button-select select {
 		padding-right: 2.5em;
 	}
 }
 
 /* Disabled button */
-.button-select [disabled] {
+%csans-button-select [disabled] {
 	cursor: default;
 	opacity: 0.5;
 	pointer-events: none;

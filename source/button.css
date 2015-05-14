@@ -16,7 +16,7 @@ etc...
 */
 
 /* Generic button */
-.button {
+%csans-button {
 	box-sizing: border-box;
 	display: inline-block;
 	padding: 0.3em 1em;
@@ -36,10 +36,6 @@ etc...
 	line-height: 1.25;
 	max-width: 100%;
 	text-overflow: ellipsis;
-
-	&:hover {
-		background-color: #999;
-	}
 }
 
 /*
@@ -49,7 +45,7 @@ Forms made button:
 	<input type="submit" value="send">
 </form>
 */
-form.button {
+form%csans-button {
 	padding: 0;
 
 	fieldset {
@@ -80,7 +76,7 @@ Buttons containing file inputs:
 	<input type="file">
 </label>
 */
-.button input[type="file"] {
+%csans-button input[type="file"] {
 	opacity: 0;
 	position: absolute;
 	left: 0;
@@ -89,7 +85,7 @@ Buttons containing file inputs:
 }
 
 /* Buttons with select */
-select.button {
+select%csans-button {
 	line-height: 1;
 	padding-right: 0.7em;
 	padding-left: 0.7em;
@@ -101,8 +97,8 @@ select.button {
 }
 
 /* Disabled button */
-.button[disabled],
-form.button [disabled] {
+%csans-button[disabled],
+form%csans-button [disabled] {
 	cursor: default;
 	opacity: 0.5;
 	pointer-events: none;

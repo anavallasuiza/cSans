@@ -13,8 +13,8 @@ For example:
 }
 */
 
-.image a,
-.image {
+%csans-image a,
+%csans-image {
 	background-repeat: no-repeat;
 	background-color: transparent;
 	margin: 0;
@@ -31,15 +31,15 @@ For example:
 	color: transparent;
 }
 
-:matches(h1, h2, h3, h4, h5, h6).image {
+:matches(h1, h2, h3, h4, h5, h6)%csans-image {
 	display: block;
 }
 
-:matches(a, input, button).image {
+:matches(a, input, button)%csans-image {
 	cursor:pointer;
 }
 
-.image a {
+%csans-image a {
 	display:block;
 	width:100%;
 	height:100%;

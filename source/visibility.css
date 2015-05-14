@@ -5,12 +5,12 @@ Change the visibility of some elements
 */
 
 /* Hide the element */
-.hidden {
+%csans-hidden {
 	display: none;
 }
 
 /* Hide de element but maintain the layout */
-.invisible {
+%csans-invisible {
 	visibility: hidden;
 }
 
@@ -18,7 +18,7 @@ Change the visibility of some elements
 * Hide only visually, but have it available for screen readers:
 * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 */
-.visuallyhidden {
+%csans-visuallyhidden {
 	border: 0 !important;
 	clip: rect(0 0 0 0) !important;
 	position: absolute !important;
@@ -29,8 +29,8 @@ Change the visibility of some elements
 	margin: -1px !important;
 }
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+%csans-visuallyhidden.focusable:active,
+%csans-visuallyhidden.focusable:focus {
 	clip: auto;
 	position: static;
 	overflow: visible;

@@ -7,12 +7,12 @@ Simple clearfix hack.
 More info: http://www.cssmojo.com/latest_new_clearfix_so_far/
 */
 
-.clear::before,
-.clear::after {
+%csans-clearfix::before,
+%csans-clearfix::after {
 	content: "";
 	display: table;
 }
 
-.clear::after {
+%csans-clearfix::after {
 	clear: both;
 }

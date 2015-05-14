@@ -1,10 +1,54 @@
-@import "image.css";
 @import "aspect-ratio.css";
-@import "clearfix.css";
-@import "visibility.css";
-
 @import "button.css";
 @import "button-select.css";
-
+@import "clearfix.css";
+@import "image.css";
 @import "link.css";
 @import "link-select.css";
+@import "visibility.css";
+
+.aspect-ratio {
+	@extend %csans-aspect-ratio;
+}
+.aspect-ratio-16-9 {
+	@extend %csans-aspect-ratio-16-9;
+}
+.aspect-ratio-4-3 {
+	@extend %csans-aspect-ratio-4-3;
+}
+
+.button {
+	@extend %csans-button;
+}
+
+.button-select {
+	@extend %csans-button-select;
+}
+
+.clearfix {
+	@extend %csans-clearfix;
+}
+
+.image {
+	@extend %csans-image;
+}
+
+.link {
+	@extend %csans-link;
+}
+
+.link-select {
+	@extend %csans-link-select;
+}
+
+.hidden {
+	@extend %csans-hidden;
+}
+
+.invisible {
+	@extend %csans-invisible;
+}
+
+.visuallyhidden {
+	@extend %csans-visuallyhidden;
+}

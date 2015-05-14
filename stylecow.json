@@ -1,7 +1,11 @@
 {
-	"input": "source/csans.css",
-	"output": "dist/csans.css",
-	"map": "dist/csans.map",
+	"files": [
+		{
+			"input": "source/csans.css",
+			"output": "dist/csans.css",
+			"map": "dist/csans.map"
+		}
+	],
 	"support": {
 		"explorer": 9,
 		"firefox": 30,
@@ -13,6 +17,7 @@
 	},
 	"plugins": [
 		"color",
+		"extend",
 		"fixes",
 		"flex",
 		"import",

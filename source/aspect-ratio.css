@@ -11,7 +11,7 @@ Example:
 </div>
 */
 
-.aspect-ratio {
+%csans-aspect-ratio {
 	max-width: 100%;
 	position: relative;
 	height: 0;
@@ -25,16 +25,16 @@ Example:
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 100% !important;
+		height: 100% !important;
 	}
 }
 
 /* Some predefined aspect ratios: */
-.aspect-ratio-16-9 {
+%csans-aspect-ratio-16-9 {
 	padding-bottom: 56.25%;
 }
 
-.aspect-ratio-4-3 {
+%csans-aspect-ratio-4-3 {
 	padding-bottom: 75%;
 }

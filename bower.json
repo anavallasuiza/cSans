@@ -1,14 +1,16 @@
 {
     "name": "csans",
     "description": "Collection of useful css classes",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "homepage": "https://github.com/oscarotero/cSans",
     "license": "MIT",
     "main": "dist/csans.css",
     "keywords": [
         "css",
+        "image replacement",
         "buttons",
         "clearfix",
+        "styles",
         "aspect ratio"
     ],
     "repository": {
