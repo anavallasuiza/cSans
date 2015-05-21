@@ -166,8 +166,8 @@ Example:
 	margin: 0;
 	border: none;
 	background: none;
-	-webkit-appearance: none;
 	-moz-appearance: none;
+	-webkit-appearance: none;
 	appearance: none;
 	cursor: pointer;
 	outline: none;
@@ -377,8 +377,8 @@ Example:
 	margin: 0;
 	border: none;
 	background: none;
-	-webkit-appearance: none;
 	-moz-appearance: none;
+	-webkit-appearance: none;
 	appearance: none;
 	cursor: pointer;
 	text-decoration: inherit;

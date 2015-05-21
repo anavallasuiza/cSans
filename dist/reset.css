@@ -1,0 +1,213 @@
+
+/*
+================================
+Reset
+================================
+
+Resets all elements of the html
+*/
+
+/* Root elements */
+html {
+	font-size: 100%;
+	font-family: sans-serif;
+	line-height: 1.4;
+	color: #000;
+	text-rendering: optimizeLegibility;
+}
+body {
+	margin: 0;
+}
+
+/* Block elements */
+audio,
+canvas,
+iframe,
+img,
+object,
+embed,
+video,
+address,
+article,
+aside,
+blockquote,
+details,
+div,
+figcaption,
+figure,
+footer,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+nav,
+p,
+pre,
+section,
+summary {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+address {
+	font-style: normal;
+}
+blockquote {
+	margin-left: 1.5em;
+}
+hr {
+	background: none;
+	border-top: 1px solid #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	line-height: 1.1;
+	margin: 1em 0 0.5em 0;
+}
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6 {
+	margin: 0;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.2em;
+}
+h4,
+h5,
+h6 {
+	font-size: 1em;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+/* Forms */
+form,
+fieldset,
+legend {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+}
+legend {
+	font-weight: bold;
+	border: 0;
+}
+button,
+input,
+select,
+textarea {
+	box-sizing: border-box;
+	margin: 0;
+	vertical-align: middle;
+	text-transform: none;
+}
+textarea {
+	width: 12em;
+	height: 4em;
+	vertical-align: top;
+	resize: vertical;
+}
+button,
+input {
+	line-height: normal;
+}
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	cursor: pointer;
+	width: auto;
+	overflow: visible;
+}
+input[type='checkbox'],
+input[type='radio'] {
+	padding: 0;
+}
+
+/* Lists */
+ol,
+ul,
+dl,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+}
+ol,
+ul,
+dd {
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+ol {
+	list-style-type: decimal;
+}
+ul {
+	list-style-type: disc;
+}
+
+/* Tables */
+table {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption,
+th {
+	font-weight: bold;
+}
+th,
+td {
+	text-align: left;
+	padding: 0;
+	border: 1px solid #CCC;
+}
+
+/* Monospace elements */
+pre,
+code,
+kbd,
+samp {
+	font-family: 'Courier new', Courier, monospace;
+	line-height: 1.5;
+	white-space: pre;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	white-space: pre-line;
+	word-wrap: break-word;
+}

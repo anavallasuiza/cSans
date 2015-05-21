@@ -4,6 +4,10 @@
 			"input": "source/csans.css",
 			"output": "dist/csans.css",
 			"map": "dist/csans.map"
+		},{
+			"input": "source/reset.css",
+			"output": "dist/reset.css",
+			"map": false
 		}
 	],
 	"support": {
